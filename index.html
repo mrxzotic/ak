@@ -6,7 +6,6 @@
   <title>alex kornev — building from moscow to europe</title>
   <meta name="description" content="alex kornev — 36 / tech, style & discipline / documenting the rebuild, moscow → europe. follow along." />
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="alex kornev — building from moscow to europe" />
   <meta property="og:description" content="36 / tech, style & discipline / documenting the rebuild. new video every week." />
   <meta property="og:type" content="website" />
@@ -14,27 +13,24 @@
   <meta property="og:image" content="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%230b0b0c'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Helvetica Neue,Arial' font-size='56' fill='%23e6e6e6' letter-spacing='1.5'%3Ealex kornev%3C/text%3E%3C/svg%3E" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicon (data URI, replace later if you want) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230b0b0c'/%3E%3Ctext x='50' y='58' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Helvetica Neue,Arial' font-size='58' text-anchor='middle' fill='%23e6e6e6'%3Ea%3C/text%3E%3C/svg%3E" />
 
   <style>
-    /* Reset-ish */
     *,*::before,*::after{box-sizing:border-box}
     html,body{height:100%}
     html{color-scheme:dark}
     body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;background:#0b0b0c;color:#e6e6e6;line-height:1.45;-webkit-font-smoothing:antialiased;}
 
     :root{
-      --bg:#0b0b0c;           /* gloomy base */
-      --fg:#e6e6e6;           /* primary text */
-      --muted:#a5a5a5;        /* secondary */
-      --edge:#1a1a1b;         /* card edge */
-      --card:#101012;         /* card bg */
-      --accent:#F6A800; /* veuve-like accent */       /* subtle accents */
-      --focus:#7aa2ff;        /* focus ring */
+      --bg:#0b0b0c;
+      --fg:#e6e6e6;
+      --muted:#a5a5a5;
+      --edge:#1a1a1b;
+      --card:#101012;
+      --accent:#F6A800;
+      --focus:#7aa2ff;
     }
 
-    /* Subtle vignette/gradient backdrop */
     .backdrop{
       position:fixed;inset:0;pointer-events:none;z-index:-1;
       background: radial-gradient(1200px 600px at 70% 10%, #151517 0%, transparent 60%),
@@ -42,7 +38,7 @@
                   linear-gradient(#0b0b0c,#0b0b0c);
     }
 
-    .wrap{min-height:100%;display:grid;place-items:center;padding:8vh 24px}min-height:100%;display:grid;place-items:center;padding:6vh 24px}
+    .wrap{min-height:100%;display:grid;place-items:center;padding:8vh 24px}
 
     .card{
       width:min(860px,100%);
@@ -54,8 +50,7 @@
     }
 
     header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo-dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(180deg,#d8d8d8,#7a7a7a)}
+    .logo{display:flex;align-items:center;gap:12px;color:var(--accent)}
     .logo h1{margin:0;font-size:clamp(18px,2vw,20px);font-weight:600;letter-spacing:0.3px}
     .tag{font-size:13px;color:var(--muted);}
 
@@ -63,23 +58,16 @@
     .hero p{margin:0 0 8px 0;color:var(--muted);font-size:clamp(16px,2.4vw,18px)}
 
     .cta{display:flex;flex-wrap:wrap;gap:14px 14px;margin-top:36px}
+
     .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border:1px solid var(--edge);border-radius:16px;color:var(--fg);text-decoration:none;background:linear-gradient(180deg,#151517,#0f0f11);transition:transform .15s ease, border-color .15s ease;}
     .btn:hover{transform:translateY(-1px);border-color:#2a2a2c}
     .btn svg{width:18px;height:18px}
 
-    .subtle{margin-top:18px;font-size:14px;color:var(--muted)}
-
     .footer{display:flex;justify-content:space-between;align-items:center;margin-top:36px;font-size:13px;color:var(--muted)}
     .mail{color:var(--fg);text-decoration:none;border-bottom:1px dotted #3a3a3c}
 
-    /* Focus styles */
     a:focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:10px}
-
-    /* Reduced motion */
     @media (prefers-reduced-motion: reduce){.btn{transition:none}}
-      /* accent styling */
-    .accent{color:var(--accent)}
-
   </style>
 </head>
 <body>
@@ -95,7 +83,7 @@
       </header>
 
       <div class="hero">
-        <h2>building in <span class="accent">public</span></h2>
+        <h2>building in public</h2>
         <p>weekly videos: creator infrastructure, menswear field tests, and the move to the UK. english-first. no fluff.</p>
 
         <nav class="cta" aria-label="primary links">
@@ -112,18 +100,16 @@
             <span>tiktok</span>
           </a>
         </nav>
-        <p class="subtle">new here? start with the day‑zero video on any platform above.</p>
       </div>
 
       <div class="footer">
         <span>© <span id="y"></span> alex kornev</span>
-        <a class="mail" href="#" onclick="window.location.href='mailto:'+'hi'+'@'+'alexkornev.co'">hi[at]alexkornev[dot]co</a>
+        <a class="mail" href="mailto:hi@alexkornev.co">hi@alexkornev.co</a>
       </div>
     </section>
   </main>
 
   <script>
-    // set current year without frameworks
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
