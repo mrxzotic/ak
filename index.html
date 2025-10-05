@@ -30,7 +30,7 @@
       --muted:#a5a5a5;        /* secondary */
       --edge:#1a1a1b;         /* card edge */
       --card:#101012;         /* card bg */
-      --accent:#cfcfcf;       /* subtle accents */
+      --accent:#F6A800; /* veuve-like accent */       /* subtle accents */
       --focus:#7aa2ff;        /* focus ring */
     }
 
@@ -42,15 +42,15 @@
                   linear-gradient(#0b0b0c,#0b0b0c);
     }
 
-    .wrap{min-height:100%;display:grid;place-items:center;padding:6vh 24px}
+    .wrap{min-height:100%;display:grid;place-items:center;padding:8vh 24px}min-height:100%;display:grid;place-items:center;padding:6vh 24px}
 
     .card{
       width:min(860px,100%);
-      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
+      background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.00));
       border:1px solid var(--edge);
-      border-radius:24px; padding:40px clamp(24px,5vw,56px);
-      backdrop-filter:saturate(120%) blur(6px);
-      box-shadow:0 20px 60px rgba(0,0,0,0.35);
+      border-radius:28px; padding:48px clamp(24px,5.2vw,64px);
+      backdrop-filter:saturate(120%) blur(8px);
+      box-shadow:0 28px 80px rgba(0,0,0,0.38);
     }
 
     header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
@@ -59,11 +59,11 @@
     .logo h1{margin:0;font-size:clamp(18px,2vw,20px);font-weight:600;letter-spacing:0.3px}
     .tag{font-size:13px;color:var(--muted);}
 
-    .hero h2{margin:0 0 10px 0;font-size:clamp(30px,6vw,64px);font-weight:700;letter-spacing:-0.5px}
-    .hero p{margin:0;color:var(--muted);font-size:clamp(16px,2.4vw,18px)}
+    .hero h2{margin:0 0 14px 0;font-size:clamp(36px,7.2vw,72px);font-weight:800;letter-spacing:-0.6px}
+    .hero p{margin:0 0 8px 0;color:var(--muted);font-size:clamp(16px,2.4vw,18px)}
 
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--edge);border-radius:14px;color:var(--fg);text-decoration:none;background:linear-gradient(180deg,#151517,#0f0f11);transition:transform .15s ease, border-color .15s ease;}
+    .cta{display:flex;flex-wrap:wrap;gap:14px 14px;margin-top:36px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border:1px solid var(--edge);border-radius:16px;color:var(--fg);text-decoration:none;background:linear-gradient(180deg,#151517,#0f0f11);transition:transform .15s ease, border-color .15s ease;}
     .btn:hover{transform:translateY(-1px);border-color:#2a2a2c}
     .btn svg{width:18px;height:18px}
 
@@ -77,6 +77,9 @@
 
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce){.btn{transition:none}}
+      /* accent styling */
+    .accent{color:var(--accent)}
+
   </style>
 </head>
 <body>
@@ -86,14 +89,13 @@
     <section class="card" aria-label="intro">
       <header>
         <div class="logo" aria-label="site brand">
-          <span class="logo-dot" aria-hidden="true"></span>
           <h1>alex kornev</h1>
         </div>
         <div class="tag">moscow → europe · tech, style & discipline</div>
       </header>
 
       <div class="hero">
-        <h2>building in public</h2>
+        <h2>building in <span class="accent">public</span></h2>
         <p>weekly videos: creator infrastructure, menswear field tests, and the move to the UK. english-first. no fluff.</p>
 
         <nav class="cta" aria-label="primary links">
@@ -115,7 +117,7 @@
 
       <div class="footer">
         <span>© <span id="y"></span> alex kornev</span>
-        <a class="mail" href="mailto:hi@alexkornev.co">hi@alexkornev.co</a>
+        <a class="mail" href="#" onclick="window.location.href='mailto:'+'hi'+'@'+'alexkornev.co'">hi[at]alexkornev[dot]co</a>
       </div>
     </section>
   </main>
